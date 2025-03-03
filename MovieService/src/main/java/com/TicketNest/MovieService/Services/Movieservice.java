@@ -35,7 +35,6 @@ public class Movieservice {
     }
 
     public MovieDTO addMovie(MovieDTO movieDto) {
-        convertToEntity(movieDto);
         return convertToDTO(movieRepo.save(convertToEntity(movieDto)));
     }
 
